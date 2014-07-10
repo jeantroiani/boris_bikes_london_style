@@ -35,7 +35,7 @@ describe Person do
 	it 'can return a bike to a station' do
 		the_station= double :station
 		person = Person.new(:bike)
-		expect(the_station).to receive(:return_bike)
+		expect(the_station).to receive(:store).with(:bike).and_return(nil)
 		person.return_a_bike_to(the_station)
 	end
 
@@ -43,7 +43,7 @@ describe Person do
 	it'has no bikes once he returned to a station' do
 		person = Person.new(:bike) 
 		the_station = double :station
-		allow(the_station).to receive(:return_bike).and_return(nil)
+		expect(the_station).to receive(:store).with(:bike).and_return(nil)
 		person.return_a_bike_to(the_station)
 		expect(person).not_to have_bike
 	end

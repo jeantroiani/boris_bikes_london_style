@@ -18,7 +18,7 @@ class Person
 	end
 
 	def return_a_bike_to(station)
-		@bike=station.return_bike
+		@bike=station.store(@bike)
 	end
 
 end
