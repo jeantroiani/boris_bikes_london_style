@@ -1,4 +1,14 @@
-boris_bikes_london_style
+Boris bikes london style
 ========================
+Version of London Boris Bikes using London TDD. Simulates how this system administrates the process of renting bikes.
 
-new version of BB using London TDD
+
+How to use it
+=============
+git clone https://github.com/jeantroiani/boris_bikes_london_style.git
+
+Technologies used
+=============
+- Ruby
+- Rspec
+
